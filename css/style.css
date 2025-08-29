@@ -32,11 +32,11 @@ a {
     animation: float 15s infinite ease-in-out;
 }
 .leaf1 { top: 20%; left: 10%; animation-duration: 20s; }
-.leaf2 { top: 60%; left: 80%; animation-duration: 25s; }
-.leaf3 { top: 80%; left: 30%; animation-duration: 18s; }
+.leaf2 { top: 60%; left: 27%; animation-duration: 25s; }
+.leaf3 { top: 80%; left: 19%; animation-duration: 18s; }
 .leaf4 { top: 70%; left: 05%; animation-duration: 22s; }
 .leaf5 { top: 10%; left: 90%; animation-duration: 17s; }
-.leaf6 { top: 90%; left: 50%; animation-duration: 28s; }
+.leaf6 { top: 90%; left: 73%; animation-duration: 28s; }
 
 @keyframes float {
     0% { transform: translateY(0) rotate(0deg); }
