@@ -1,0 +1,289 @@
+/* --- General Body & Theming --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    color: #2c5b3d;
+    font-weight: 600;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+/* --- Floating Leaves Animation --- */
+.floating-leaf {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #6fbf73;
+    border-radius: 5px 20px 5px 20px;
+    opacity: 0.5;
+    z-index: -1;
+    animation: float 15s infinite ease-in-out;
+}
+.leaf1 { top: 20%; left: 10%; animation-duration: 20s; }
+.leaf2 { top: 60%; left: 27%; animation-duration: 25s; }
+.leaf3 { top: 80%; left: 19%; animation-duration: 18s; }
+.leaf4 { top: 70%; left: 05%; animation-duration: 22s; }
+.leaf5 { top: 10%; left: 90%; animation-duration: 17s; }
+.leaf6 { top: 90%; left: 73%; animation-duration: 28s; }
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-300px) rotate(360deg); }
+    100% { transform: translateY(0) rotate(720deg); }
+}
+
+/* --- Header --- */
+header {
+    background: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    width: 100%;
+    box-sizing: border-box;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+header h1 { margin: 0; }
+header h3 { margin: 0; font-weight: 400; color: #555; }
+
+/* --- Navigation Bar --- */
+.navbar {
+    background-color: #4CAF50;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.nav-link {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.nav-link:hover, .nav-link.active {
+    background-color: #45a049;
+}
+
+/* --- Main Content Wrappers --- */
+main {
+    flex-grow: 1;
+    width: 100%;
+}
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.page-section {
+    background: #fff;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* --- Login Page --- */
+#login-section-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+#login-section {
+    background-color: #ffffff;
+    padding: 2.5rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+#login-section input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+#login-section button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+#login-section button:hover {
+    background-color: #45a049;
+}
+
+/* --- Pot Selection Page (My Plants) --- */
+#pot-selection-section {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+#pot-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.pot-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 250px;
+    text-align: center;
+    color: #333; /* Resets link color */
+}
+.pot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.pot-card h3 { margin: 0; font-size: 1.2rem; }
+.pot-card-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+/* --- Pot Detail Page --- */
+#pot-detail-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+}
+.back-button {
+    position: absolute;
+    left: 20px;
+    background: #e9ecef;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.back-button:hover {
+    background-color: #d8dde2;
+}
+#pot-detail-name { margin: 0; }
+
+.data-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+.metric-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    flex-grow: 1;
+    min-width: 150px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.metric-icon { font-size: 2.5rem; }
+.metric-title { font-weight: 500; color: #555; }
+.metric-value { font-size: 2rem; font-weight: 600; color: #2c5b3d; }
+
+.chart-container {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.actions-container {
+    text-align: center;
+    padding: 2rem;
+}
+#water-pump-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#water-pump-btn:hover { background-color: #2980b9; }
+
+/* --- About & Contact Pages --- */
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.about-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+}
+#contactForm input, #contactForm textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 1rem;
+}
+#contactForm button {
+    padding: 12px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto; /* Pushes footer to the bottom */
+    color: #777;
+    background-color: #f4f7f6;
+    width: 100%;
+    box-sizing: border-box;
+}
